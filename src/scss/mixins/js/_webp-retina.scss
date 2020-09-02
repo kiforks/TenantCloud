@@ -1,0 +1,43 @@
+/*
+  Webp support + retina
+
+  Example:
+  @include background-image-retina('../img/@1x/background/background-main@1x.jpg',
+                                    '../img/@2x/background/background-main@2x.jpg',
+                                    '../img/@1x/background/background-main@1x.webp',
+                                    '../img/@2x/background/background-main@2x.webp');
+*/
+
+@mixin background-image-retina($url, $url2x: false, $webp1x: false, $webp2x: false) {
+  background-image: url($url);
+  @if $webp1x {
+    .webp & {
+      background-image: url($webp1x);
+    }
+  }
+  @if $url2x {
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url($url2x);
+      @if $webp2x {
+        .webp & {
+          background-image: url($webp2x);
+        }
+      }
+    }
+  }
+}
+
+/*
+  Example:
+  @include background-image('../img/@1x/background/background-main@1x.jpg',
+                            '../img/@1x/background/background-main@1x.webp';
+*/
+
+@mixin background-image($url, $webp1x: false) {
+  background-image: url($url);
+  @if $webp1x {
+    .webp & {
+      background-image: url($webp1x);
+    }
+  }
+}

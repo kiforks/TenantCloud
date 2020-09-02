@@ -1,0 +1,11 @@
+.DS_Store
+.idea
+*.log
+*.sublime*
+node_modules/
+build/
+npm-debug.*
+Thumbs.db
+src/templates/CIDFont
+src/templates/CMap
+src/templates/Font

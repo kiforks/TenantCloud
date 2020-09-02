@@ -1,0 +1,23 @@
+.parallax {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-repeat: no-repeat;
+
+  /* BG behaviour */
+  background-position: center;
+  background-size: cover;
+  transform: translate3d(0, 0, 0);
+  transform-style: preserve-3d;
+}
+
+.parallax__container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -100;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  clip: rect(0, auto, auto, 0);
+}

@@ -1,0 +1,6 @@
+src/scss/style.scss
+src/scss/fonts.scss
+src/scss/mixins/**/*
+src/scss/variables/**/*
+**/*.css
+

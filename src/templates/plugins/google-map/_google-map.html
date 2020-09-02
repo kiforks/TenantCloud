@@ -1,0 +1,33 @@
+<!--  GOOGLE MAP-->
+<script>
+  function initMap(){
+    var element = document.querySelector('.contacts__map');
+    var options = {
+      zoom: 15,
+      center: {
+        lat: 50.444501,
+        lng: 30.528881
+      }
+    };
+    var myMap = new google.maps.Map(element, options);
+
+    addMarker({
+      lat: 50.444501,
+      lng: 30.528881
+    });
+
+    function addMarker(coordinates) {
+      var marker = new google.maps.Marker({
+        position: coordinates,
+        map: myMap,
+        icon: {url:'img/svg/map-pin.svg',scaledSize: new google.maps.Size(78, 120)},
+        draggable: true,
+        animation: google.maps.Animation.DROP,
+      });
+    }
+  }
+
+</script>
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA4rRFcBA-hyVXiXyvB9pDcYhc-PjvEXvk&callback=initMap">
+</script>

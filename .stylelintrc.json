@@ -1,0 +1,91 @@
+{
+  "plugins": [
+    "stylelint-order",
+    "stylelint-scss",
+    "stylelint-declaration-block-no-ignored-properties"
+  ],
+  "extends": [
+    "stylelint-order-htmlacademy",
+    "stylelint-config-htmlacademy"
+  ],
+  "rules": {
+    "color-hex-case": "upper",
+    "no-empty-source": null,
+    "string-quotes": "single",
+    "plugin/declaration-block-no-ignored-properties": true,
+    "order/order": [
+      {
+        "type": "at-rule",
+        "name": "include"
+      },
+      {
+        "type": "at-rule",
+        "name": "include",
+        "parameter": "reset"
+      },
+      {
+        "type": "at-rule",
+        "name": "include",
+        "parameter": "padding"
+      },
+      {
+        "type": "at-rule",
+        "name": "include",
+        "parameter": "margin"
+      },
+      "custom-properties",
+      "declarations",
+      {
+        "type": "at-rule",
+        "name": "include",
+        "parameter": "placeholder"
+      },
+      {
+        "type": "at-rule",
+        "name": "include",
+        "parameter": "hover"
+      },
+      {
+        "type": "at-rule",
+        "name": "include",
+        "parameter": "active"
+      },
+      {
+        "type": "at-rule",
+        "name": "include",
+        "parameter": "before-after"
+      },
+      {
+        "type": "at-rule",
+        "name": "include",
+        "parameter": "before"
+      },
+      {
+        "type": "at-rule",
+        "name": "include",
+        "parameter": "after"
+      },
+      {
+        "type": "at-rule",
+        "name": "include",
+        "parameter": "disabled"
+      },
+      {
+        "type": "rule",
+        "selector": "^&:first"
+      },
+      {
+        "type": "rule",
+        "selector": "^&:last"
+      },
+      {
+        "type": "rule",
+        "selector": "^&--"
+      },
+      {
+        "type": "rule",
+        "selector": "^."
+      }
+    ]
+  }
+}

@@ -1,0 +1,79 @@
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  @include desktop-middle {
+    font-size: $font-size-middle;
+  }
+
+  @include desktop-small {
+    font-size: $font-size-small;
+  }
+
+  @include tablet {
+    font-size: $font-size-tablet;
+  }
+
+  @include mobile {
+    font-size: $font-size-mobile;
+  }
+
+  @include center-margin;
+  position: relative;
+  min-width: 320px;
+  max-width: 1920px;
+  font-weight: $font-weight;
+  font-size: $font-size;
+  line-height: $line-height;
+  font-family: $font-family, $sans-serif;
+  text-align: $text-align;
+  color: $text-color;
+  background-color: $background-color;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+}
+
+img {
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  max-height: 100%;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+iframe {
+  border: none;
+}
+
+path,
+g {
+  fill: inherit;
+}
+
+input,
+textarea,
+select,
+button {
+  font: inherit;
+}
+
+::selection {
+  color: white;
+  background-color: #004FE4;
+}

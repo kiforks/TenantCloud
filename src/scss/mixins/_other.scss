@@ -1,0 +1,91 @@
+@mixin padding-vertical($padding-top, $padding-bottom: false) {
+  padding-top: $padding-top;
+
+  @if $padding-bottom {
+    padding-bottom: $padding-bottom;
+  } @else {
+    padding-bottom: $padding-top;
+  }
+}
+
+@mixin padding-horizon($padding-right, $padding-left: false) {
+  padding-right: $padding-right;
+
+  @if $padding-left {
+    padding-left: $padding-left;
+  } @else {
+    padding-left: $padding-right;
+  }
+}
+
+@mixin margin-vertical($margin-top, $margin-bottom: false) {
+  margin-top: $margin-top;
+
+  @if $margin-bottom {
+    margin-bottom: $margin-bottom;
+  } @else {
+    margin-bottom: $margin-top;
+  }
+}
+
+@mixin margin-horizon($margin-right, $margin-left: false) {
+  margin-right: $margin-right;
+
+  @if $margin-left {
+    margin-left: $margin-left;
+  } @else {
+    margin-left: $margin-right;
+  }
+}
+
+@mixin margin-negative-mobile {
+  margin-right: -$mobile-padding;
+  margin-left: -$mobile-padding;
+  padding-right: $mobile-padding;
+  padding-left: $mobile-padding;
+}
+
+@mixin margin-negative-tablet {
+  margin-right: -$tablet-padding;
+  margin-left: -$tablet-padding;
+  padding-right: $tablet-padding;
+  padding-left: $tablet-padding;
+}
+
+@mixin padding-mobile {
+  padding-right: $mobile-padding;
+  padding-left: $mobile-padding;
+}
+
+@mixin padding-tablet {
+  padding-right: $tablet-padding;
+  padding-left: $tablet-padding;
+}
+
+@mixin padding-desktop {
+  padding-right: $desktop-padding;
+  padding-left: $desktop-padding;
+}
+
+@mixin flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@mixin flex-row {
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin transition {
+  transition: $transition-duration ease-in-out;
+}
+
+@mixin transition-fade {
+  transition: opacity $transition-duration ease-in-out;;
+}

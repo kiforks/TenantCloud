@@ -1,0 +1,23 @@
+.site-map {
+  @include reset-list;
+  @include center-margin;
+  width: 600px;
+  font-weight: bold;
+  font-size: 35px;
+  line-height: 42px;
+  color: black;
+}
+
+.site-map__item {
+  @include focus-opacity;
+}
+
+
+//Mobile
+@include mobile {
+  .site-map {
+    width: 280px;
+    font-size: 16px;
+    line-height: 160%;
+  }
+}

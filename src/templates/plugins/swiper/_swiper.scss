@@ -1,0 +1,19 @@
+@mixin swiper {
+  & {
+    position: relative;
+    overflow: hidden;
+  }
+
+  &__list {
+    display: flex;
+    @include reset-list;
+  }
+
+  &__item {
+    flex-shrink: 0;
+  }
+
+  &__pagination {
+    @include reset-margin-text;
+  }
+}
