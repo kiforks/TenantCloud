@@ -209,7 +209,7 @@ function ignoredImages() {
 }
 
   /* Resize to retina + sorting images */
-function retina() {
+function retinaX2() {
   return src(path.src.retina)
     .pipe(imageResize({
       width: `200%`
@@ -218,6 +218,10 @@ function retina() {
       suffix: `@2x`
     }))
     .pipe(dest(path.build.retina.x2))
+}
+
+function retinaX3() {
+  return src(path.src.retina)
     .pipe(imageResize({
       width: `300%`
     }))
@@ -226,6 +230,8 @@ function retina() {
     }))
     .pipe(dest(path.build.retina.x3))
 }
+
+
 
 function sortingImages () {
   return src(path.src.img)
@@ -358,6 +364,7 @@ function libs() {
 
 
 // Build
+const retina = gulp.parallel(retinaX2, retinaX3);
 const javaScript = gulp.parallel(js, jsPlugins);
 const styles = gulp.series(css, stylelint);
 const fonts = gulp.series(ttfConversion, woffConversion);

@@ -1,0 +1,18 @@
+.main {
+  padding-top: 44%;
+}
+
+.main__promo {
+  margin-bottom: 150px;
+}
+
+//Tablet
+@include tablet {
+  .main {
+    padding-top: 0;
+  }
+
+  .main__promo {
+    margin-bottom: 0.6%;
+  }
+}

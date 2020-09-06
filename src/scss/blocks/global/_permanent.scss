@@ -11,7 +11,7 @@ html {
 body {
   @include tablet {
     font-size: $font-size-tablet;
-    line-height: 140px;
+    line-height: 140%;
   }
 
   @include desktop-small {

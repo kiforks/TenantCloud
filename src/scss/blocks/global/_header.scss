@@ -150,6 +150,8 @@
 @include tablet {
   .header {
     @include padding-vertical(1.5%);
+    position: static;
+    margin-bottom: 2.4%;
     border-bottom: 0;
     box-shadow: none;
   }
