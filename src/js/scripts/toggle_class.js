@@ -14,9 +14,7 @@
         event.preventDefault();
 
         toggleItem.forEach(item => {
-          let itemHasToggle = item.classList;
-
-          itemHasToggle.contains(itemActiveClass) ? itemHasToggle.remove(itemActiveClass) : itemHasToggle.add(itemActiveClass);
+          item.classList.toggle(itemActiveClass)
         })
       }
     })
@@ -26,19 +24,17 @@
     return new Proxy(target, {
       get: (obj, prop) => (prop in obj ? obj[prop] : defaultValue)
     })
-  }
+  };
 
-  const example = createTarget(
+  const header = createTarget(
     {
-      toggleItem: 'item',
-      toggleButton: 'button',
-      modifierItem: '--id',
-      modifierButton: '--id'
+      toggleItem: 'header',
+      toggleButton: 'header__button'
     }
-  )
+  );
 
   const toggleObjects = [
-    example
+    header
   ];
 
   const toggleClassInit = () => toggleObjects.forEach(object => toggleClass(object));

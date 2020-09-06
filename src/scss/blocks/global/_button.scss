@@ -1,0 +1,40 @@
+.button {
+  @include transition;
+  display: inline-block;
+  font-weight: bold;
+  color: $orange;
+  border: 2px solid $orange;
+  border-radius: 6px;
+
+  @include hover {
+    color: white;
+    background-color: $orange;
+  }
+
+  @include active-scale();
+
+  &--orange {
+    color: white;
+    background-color: $orange;
+
+    @include hover {
+      color: $orange;
+      background-color: transparent;
+    }
+  }
+}
+
+//Tablet
+@include tablet {
+  .button {
+    font-size: 16px;
+    line-height: 19px;
+    color: white;
+    background-color: $orange;
+
+    @include hover {
+      color: $orange;
+      background-color: transparent;
+    }
+  }
+}

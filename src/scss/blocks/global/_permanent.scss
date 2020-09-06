@@ -9,26 +9,21 @@ html {
 }
 
 body {
-  @include desktop-middle {
-    font-size: $font-size-middle;
+  @include tablet {
+    font-size: $font-size-tablet;
+    line-height: 140px;
   }
 
   @include desktop-small {
     font-size: $font-size-small;
   }
 
-  @include tablet {
-    font-size: $font-size-tablet;
+  @include desktop {
+    font-size: $font-size-desktop;
+    line-height: 30px;
   }
-
-  @include mobile {
-    font-size: $font-size-mobile;
-  }
-
-  @include center-margin;
   position: relative;
   min-width: 320px;
-  max-width: 1920px;
   font-weight: $font-weight;
   font-size: $font-size;
   line-height: $line-height;

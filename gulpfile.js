@@ -361,8 +361,8 @@ function libs() {
 const javaScript = gulp.parallel(js, jsPlugins);
 const styles = gulp.series(css, stylelint);
 const fonts = gulp.series(ttfConversion, woffConversion);
-const imaging = gulp.series(ignoredImages, sprite, sortingImages, /* retina,   webpBuild, */  images);
-const build = gulp.series(clean, gulp.parallel(gulp.series(imaging, html), /* favIcons, */   videoBuild, css, javaScript, libs, fonts));
+const imaging = gulp.series(ignoredImages, sprite, sortingImages,  retina,   webpBuild,   images);
+const build = gulp.series(clean, gulp.parallel(gulp.series(imaging, html),  favIcons,    videoBuild, css, javaScript, libs, fonts));
 const watch = gulp.parallel(watchFiles, serve);
 
 

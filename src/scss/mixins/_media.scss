@@ -7,25 +7,31 @@
 
 // For mobile-first change mobile or tablet max-width variable to normal width
 @mixin mobile {
-  @media (max-width: $mobile-max-width) {
+  @media (min-width: $mobile-width) {
     @content;
   }
 }
 
 @mixin tablet {
-  @media (max-width: $tablet-max-width) {
+  @media (min-width: $tablet-width) {
     @content;
   }
 }
 
 @mixin desktop-small {
-  @media (max-width: $desktop-small-max) {
+  @media (min-width: $desktop-small) {
     @content;
   }
 }
 
 @mixin desktop-middle {
-  @media (max-width: $desktop-middle-max) {
+  @media (min-width: $desktop-middle) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: $desktop-width) {
     @content;
   }
 }
