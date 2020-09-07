@@ -149,9 +149,10 @@
 //Tablet
 @include tablet {
   .header {
-    @include padding-vertical(1.5%);
+    @include padding-vertical(1.9%);
     position: static;
     margin-bottom: 2.4%;
+    background-color: transparent;
     border-bottom: 0;
     box-shadow: none;
   }
@@ -194,6 +195,6 @@
 //Desktop small
 @include desktop-small {
   .header__container {
-    @include padding-horizon(7.8%);
+    @include padding-horizon(6.2%);
   }
 }

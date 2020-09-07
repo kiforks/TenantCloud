@@ -1,6 +1,7 @@
 .main {
   padding-top: 44%;
   padding-bottom: 214px;
+  overflow: hidden;
 }
 
 .main__promo {
@@ -15,10 +16,14 @@
 @include tablet {
   .main {
     padding-top: 0;
-    padding-bottom: 9%;
+    padding-bottom: 176px;
   }
 
   .main__promo {
-    margin-bottom: 0.6%;
+    margin-bottom: 0%;
+  }
+
+  .main__advantages {
+    margin-bottom: 4%;
   }
 }

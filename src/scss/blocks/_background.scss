@@ -1,0 +1,164 @@
+.background {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.background__item {
+  position: absolute;
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-size: contain;
+
+  &--1 {
+    top: 3.8%;
+    left: -34px;
+    width: 95px;
+    height: 95px;
+  }
+
+  &--2 {
+    top: 7%;
+    right: 0;
+    width: 313px;
+    height: 830px;
+  }
+
+  &--3 {
+    top: 17.2%;
+    left: 0;
+    width: 60px;
+    height: 60px;
+  }
+
+  &--4 {
+    top: 37.5%;
+    left: 12%;
+    width: 70px;
+    height: 70px;
+  }
+
+  &--5 {
+    top: 43.5%;
+    left: 0;
+    width: 100%;
+    height: 1339px;
+    background-position: left -186px;
+  }
+
+  &--6,
+  &--7,
+  &--8,
+  &--9,
+  &--10 {
+    display: none;
+  }
+}
+
+
+//Tablet
+@include tablet {
+  .background__item {
+    &--1,
+    &--2,
+    &--3,
+    &--5 {
+      display: none;
+    }
+
+    &--6,
+    &--7,
+    &--8,
+    &--9,
+    &--10 {
+      display: block;
+    }
+
+    &--6 {
+      top: 0;
+      right: 0;
+      width: 450px;
+      height: 418px;
+    }
+
+    &--4 {
+      top: 5.5%;
+      left: 23%;
+      width: 60px;
+      height: 60px;
+    }
+
+    &--7 {
+      top: 27%;
+      right: 55%;
+      width: 38px;
+      height: 38px;
+    }
+
+    &--8 {
+      top: 34%;
+      right: 38%;
+      width: 50px;
+      height: 50px;
+    }
+
+    &--9 {
+      top: 33%;
+      left: 0;
+      width: 59%;
+      height: 613px;
+    }
+
+    &--10 {
+      right: 0;
+      bottom: 0;
+      width: 250px;
+      height: 353px;
+    }
+  }
+}
+
+//Desktop
+@include desktop {
+  .background__item {
+    &--6 {
+      width: 735px;
+      height: 683px;
+    }
+
+    &--4 {
+      top: 5.5%;
+      left: 30%;
+      width: 95px;
+      height: 95px;
+    }
+
+    &--7 {
+      top: 26%;
+      right: 49%;
+    }
+
+    &--8 {
+      top: 38%;
+      right: 43%;
+      width: 70px;
+      height: 70px;
+    }
+
+    &--9 {
+      top: 32%;
+      left: 0;
+      width: 52%;
+      height: 1300px;
+    }
+
+    &--10 {
+      right: 0;
+      bottom: 0;
+      width: 364px;
+      height: 512px;
+    }
+  }
+}
