@@ -1,15 +1,21 @@
 .main {
   padding-top: 44%;
+  padding-bottom: 214px;
 }
 
 .main__promo {
   margin-bottom: 150px;
 }
 
+.main__advantages {
+  margin-bottom: 3%;
+}
+
 //Tablet
 @include tablet {
   .main {
     padding-top: 0;
+    padding-bottom: 9%;
   }
 
   .main__promo {

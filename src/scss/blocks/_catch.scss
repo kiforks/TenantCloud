@@ -1,0 +1,161 @@
+.catch__title {
+  @include reset-margin-text;
+  margin-bottom: 6%;
+  font-weight: bold;
+  font-size: 31px;
+  line-height: 35px;
+}
+
+.catch__description {
+  @include reset-margin-text;
+  margin-bottom: 8%;
+}
+
+.catch__picture {
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  &--small {
+    display: none;
+  }
+}
+
+.catch__image {
+  @include object-fit(contain);
+}
+
+.catch__image-wrapper {
+  height: 283px;
+  margin-bottom: 22%;
+}
+
+.catch__link {
+  display: none;
+}
+
+//Tablet
+@include tablet {
+  .catch__container {
+    @include flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .catch__picture {
+    &--small {
+      position: absolute;
+      bottom: 2.3%;
+      left: 12%;
+      z-index: 10;
+      display: block;
+      width: 43%;
+      height: 136px;
+    }
+  }
+
+  .catch__wrapper {
+    width: 40%;
+    padding-top: 6.7%;
+  }
+
+  .catch__image-wrapper {
+    position: relative;
+    width: 53.1%;
+    height: 356px;
+    margin-bottom: 0;
+  }
+
+  .catch__title {
+    margin-bottom: 3.5%;
+    font-size: 25px;
+    line-height: 140%;
+  }
+
+  .catch__description {
+    margin-bottom: 6%;
+    font-size: 14px;
+    line-height: 160%;
+
+    &:last-of-type {
+      margin-bottom: 4.2%;
+    }
+  }
+
+  .catch__link {
+    @include focus-opacity;
+    @include transition;
+    position: relative;
+    display: inline-block;
+    padding-right: 7px;
+    padding-left: 1.5%;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 19px;
+    color: $green;
+
+    @include after {
+      top: 50%;
+      right: 0;
+      z-index: 10;
+      width: 8px;
+      height: 8px;
+      border-top: 2px solid $green;
+      border-right: 2px solid $green;
+      transform: rotate(45deg) translateY(-50%);
+    }
+  }
+}
+
+//Desktop small
+@include desktop-small {
+  .catch__container {
+    @include padding-horizon(10.1%);
+  }
+
+  .catch__image-wrapper {
+    height: 465px;
+    padding-left: 2%;
+  }
+
+  .catch__title {
+    font-size: 35px;
+  }
+
+  .catch__description {
+    font-size: 18px;
+  }
+
+  .catch__picture {
+    &--small {
+      height: 184px;
+    }
+  }
+}
+
+//Desktop
+@include desktop {
+  .catch__title {
+    font-size: 44px;
+    line-height: 50px;
+  }
+
+  .catch__description {
+    font-size: 22px;
+    line-height: 30px;
+  }
+
+  .catch__image-wrapper {
+    height: 586px;
+  }
+
+  .catch__picture {
+    &--small {
+      height: 226px;
+    }
+  }
+
+  .catch__wrapper {
+    padding-top: 11.7%;
+  }
+}
